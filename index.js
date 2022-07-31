@@ -46,13 +46,13 @@ const ballstart =[30 , 260]
 let ballcurrentpos = ballstart
 
 const blocks = [
-    new Block(1470,210), // bullseye
-    new Block(1470,180),
-    new Block(1470,240),
-    new Block(1470,150),
-    new Block(1470,120),
-    new Block(1470,270),
-    new Block(1470,300),
+    new Block(1450,210), // bullseye
+    new Block(1450,180),
+    new Block(1450,240),
+    new Block(1450,150),
+    new Block(1450,120),
+    new Block(1450,270),
+    new Block(1450,300),
     
 
 ]
@@ -158,7 +158,8 @@ function sleep(ms) {
                 //ballstart =[30 , 250]
                 //const ballstart =[currentpos(0)+20 , currentpos(1)+45]
                 //ballcurrentpos = ballstart
-                reset()
+                location.reload();
+
                 
                 // moveball()
                 //timerid = setInterval(moveball , time)
