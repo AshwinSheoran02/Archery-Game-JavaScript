@@ -14,6 +14,7 @@ let yDirection = 0
 let score = 0
 let time = 20
 let arrstart  = 0
+localStorage.setItem("scorer", 1);
 //const ctx = canvas.getContext('ball');
 
 const userstart = [10 , 205];
@@ -223,12 +224,15 @@ function collision(){
             if (i==2){
                 resDisplay.innerHTML = ' Bullseye! '
                 score = score+5
+                localStorage.setItem("scorer",  parseInt(localStorage.getItem("scorer")) +5 );
             }
             else{
             resDisplay.innerHTML = ' Hit! ' 
             score ++
+            localStorage.setItem("scorer",   parseInt(localStorage.getItem("scorer")) +1 );
             }
-            scoreDisplay.innerHTML = score
+            scoreDisplay.innerHTML = localStorage.getItem("scorer");
+            //scoreDisplay.innerHTML = score
             // yDirection=0
             // xDirection =0
             clearInterval(timerid)
