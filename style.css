@@ -10,6 +10,17 @@
 
 }
 
+.block1{
+    position: absolute;
+    width: 20px;
+    height: 35px;
+    /* background-image: linear-gradient(#28bbe4, #3c67e3 43%, #4e00c2); */
+    background-image: linear-gradient(#f11010, #e04040 43%, #b80202);
+    border-radius: 5px;
+    
+}
+
+
 .block{
     position: absolute;
     width: 20px;
@@ -20,15 +31,6 @@
     
 }
 
-.block1{
-    position: absolute;
-    width: 20px;
-    height: 35px;
-    /* background-image: linear-gradient(#28bbe4, #3c67e3 43%, #4e00c2); */
-    background-image: linear-gradient(#f11010, #e04040 43%, #b80202);
-    border-radius: 5px;
-    
-}
 
 
 .user{
