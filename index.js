@@ -22,9 +22,11 @@ if (isNaN(parseInt(localStorage.getItem("scorer")))){
 }
 scoreDisplay.innerHTML = localStorage.getItem("scorer");
 
+var rand = Math.floor(Math.random() * 4);
+
 //const ctx = canvas.getContext('ball');
 
-const userstart = [10 , 205];
+const userstart = [5 , 215];
 let currentpos = userstart
 
 
@@ -49,21 +51,76 @@ class Block1{
 }
 
 //const ballstart =[270 , 40]
-const ballstart =[30 , 260]
+const ballstart =[30 , 230]
 //const ballstart =[currentpos(0)+20 , currentpos(1)+45]
 let ballcurrentpos = ballstart
 
-const blocks = [
-    new Block(1300,210), // bullseye
-    new Block(1300,180),
-    new Block(1300,240),
-    new Block(1300,150),
-    new Block(1300,120),
-    new Block(1300,270),
-    new Block(1300,300),
-    
 
-]
+const Blocksarr = [ 
+    [
+    
+        new Block(1300+blockx,210+blocky), // bullseye
+    
+        new Block(1300+blockx,290+blocky),
+    
+        new Block(1300+blockx,240+blocky),
+    
+        new Block(1300+blockx,50+blocky), 
+    
+    ] , 
+    [
+    
+        new Block(1300+blockx,210+blocky), // bullseye
+    
+        new Block(1300+blockx,260+blocky),
+    
+        new Block(1300+blockx,130+blocky),
+    
+        new Block(1300+blockx,90+blocky), 
+    
+    ] , 
+    [
+    
+        new Block(1300+blockx,150+blocky), // bullseye
+    
+        new Block(1300+blockx,240+blocky),
+    
+        new Block(1300+blockx,110+blocky),
+    
+        new Block(1300+blockx,60+blocky), 
+    
+    ] , 
+    [
+    
+        new Block(1300+blockx,220+blocky), // bullseye
+    
+        new Block(1300+blockx,260+blocky),
+    
+        new Block(1300+blockx,70+blocky),
+    
+        new Block(1300+blockx,30+blocky), 
+    
+    ] , 
+
+
+
+
+ ]
+
+// const blocks = [
+    
+//     new Block(1300+blockx,210+blocky), // bullseye
+
+//     new Block(1300+blockx,300+blocky),
+
+//     new Block(1300+blockx,90+blocky),
+
+//     new Block(1300+blockx,60+blocky), 
+
+// ]
+const blocks = Blocksarr[rand]
+
+
 
 function addBlocks(){
         const block1   = document.createElement('div');
@@ -81,6 +138,7 @@ function addBlocks(){
         grid.appendChild(block);
     }
 }
+//blocky = blocky + ( getTime()/1000 % 10)
 addBlocks()
 
 function drawUser(){
@@ -242,13 +300,13 @@ function collision(){
             //     clearInterval(timerid)
             //     document.removeEventListener('keydown' , moveUser)
             // }
-            if (i==5){
-                resDisplay.innerHTML = ' Bullseye! '
+            if (i==0){
+                resDisplay.innerHTML = ' Hit! ' 
                 score = score+5
                 localStorage.setItem("scorer",  parseInt(localStorage.getItem("scorer")) +5 );
             }
             else{
-            resDisplay.innerHTML = ' Hit! ' + i
+            resDisplay.innerHTML = ' Hit! ' 
             score ++
             localStorage.setItem("scorer",   parseInt(localStorage.getItem("scorer")) +1 );
             }
