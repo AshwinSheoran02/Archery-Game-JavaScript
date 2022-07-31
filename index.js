@@ -46,13 +46,13 @@ const ballstart =[30 , 260]
 let ballcurrentpos = ballstart
 
 const blocks = [
-    new Block(1400,210), // bullseye
-    new Block(1400,180),
-    new Block(1400,240),
-    new Block(1400,150),
-    new Block(1400,120),
-    new Block(1400,270),
-    new Block(1400,300),
+    new Block(1100,210), // bullseye
+    new Block(1100,180),
+    new Block(1100,240),
+    new Block(1100,150),
+    new Block(1100,120),
+    new Block(1100,270),
+    new Block(1100,300),
     
 
 ]
