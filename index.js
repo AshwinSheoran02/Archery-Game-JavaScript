@@ -7,6 +7,8 @@ const boardWidth = 1200
 const boardHeight = 600
 const ballDiameter = 50
 let timerid
+var blockx = 0
+var blocky  = 0
 // let xDirection = 12
 // let yDirection = 8
 let xDirection = 0
@@ -15,6 +17,9 @@ let score = 0
 let time = 20
 let arrstart  = 0
 localStorage.setItem("scorer",  parseInt(localStorage.getItem("scorer")) +0 );
+if (isNaN(parseInt(localStorage.getItem("scorer")))){
+    localStorage.setItem("scorer", 0)
+}
 scoreDisplay.innerHTML = localStorage.getItem("scorer");
 
 //const ctx = canvas.getContext('ball');
@@ -237,13 +242,13 @@ function collision(){
             //     clearInterval(timerid)
             //     document.removeEventListener('keydown' , moveUser)
             // }
-            if (i==2){
+            if (i==5){
                 resDisplay.innerHTML = ' Bullseye! '
                 score = score+5
                 localStorage.setItem("scorer",  parseInt(localStorage.getItem("scorer")) +5 );
             }
             else{
-            resDisplay.innerHTML = ' Hit! ' 
+            resDisplay.innerHTML = ' Hit! ' + i
             score ++
             localStorage.setItem("scorer",   parseInt(localStorage.getItem("scorer")) +1 );
             }
