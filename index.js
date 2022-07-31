@@ -5,7 +5,7 @@ const blockwidth = 130
 const blockheight = 20
 const boardWidth = 1200
 const boardHeight = 600
-const ballDiameter = 20
+const ballDiameter = 50
 let timerid
 // let xDirection = 12
 // let yDirection = 8
@@ -46,13 +46,13 @@ const ballstart =[30 , 260]
 let ballcurrentpos = ballstart
 
 const blocks = [
-    new Block(1100,210), // bullseye
-    new Block(1100,180),
-    new Block(1100,240),
-    new Block(1100,150),
-    new Block(1100,120),
-    new Block(1100,270),
-    new Block(1100,300),
+    new Block(1200,210), // bullseye
+    new Block(1200,180),
+    new Block(1200,240),
+    new Block(1200,150),
+    new Block(1200,120),
+    new Block(1200,270),
+    new Block(1200,300),
     
 
 ]
@@ -204,7 +204,7 @@ function collision(){
 
     for (let i = 0 ; i< blocks.length ; i++){   // ball hits blocks
         if (
-            ballcurrentpos[0] > blocks[i].bottomLeft[0]  - 50 &&  ballcurrentpos[0] < blocks[i].bottomRight[0] &&
+            ballcurrentpos[0] > blocks[i].bottomLeft[0]  - 62 &&  ballcurrentpos[0] < blocks[i].bottomRight[0] &&
             (ballcurrentpos[1] +ballDiameter ) > blocks[i].bottomLeft[1] && (ballcurrentpos[1] ) < blocks[i].topLeft [1]
         ){
             // const allblocks = Array.from(document.querySelectorAll('.block'))
