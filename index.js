@@ -14,7 +14,9 @@ let yDirection = 0
 let score = 0
 let time = 20
 let arrstart  = 0
-localStorage.setItem("scorer", 1);
+localStorage.setItem("scorer",  parseInt(localStorage.getItem("scorer")) +0 );
+scoreDisplay.innerHTML = localStorage.getItem("scorer");
+
 //const ctx = canvas.getContext('ball');
 
 const userstart = [10 , 205];
@@ -154,12 +156,26 @@ function sleep(ms) {
             }
             break;
         
-        case 'r': //space
+        case 'n': //space
             
                 //ballstart =[30 , 250]
                 //const ballstart =[currentpos(0)+20 , currentpos(1)+45]
                 //ballcurrentpos = ballstart
                 location.reload();
+
+                
+                // moveball()
+                //timerid = setInterval(moveball , time)
+
+            drawUser()
+            break;
+
+        case 'r': //space
+            
+                //ballstart =[30 , 250]
+                //const ballstart =[currentpos(0)+20 , currentpos(1)+45]
+                //ballcurrentpos = ballstart
+                localStorage.clear();
 
                 
                 // moveball()
