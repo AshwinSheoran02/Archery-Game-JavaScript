@@ -64,7 +64,7 @@
 }
 @keyframes rotation {
     from {
-        transform: rotate(340deg);
+        transform: rotate(355deg);
     }
     to {
         transform: rotate(380deg);
@@ -84,7 +84,7 @@
     /* animation: spin 1.5s linear infinite; */
     /* transform: rotate(350deg); */
     /* animation: rotation 2.4s  linear; */
-    transform: rotate(355deg);
+    transform: rotate(350deg);
 
 
 }

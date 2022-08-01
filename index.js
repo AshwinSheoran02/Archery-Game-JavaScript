@@ -150,7 +150,7 @@ function drawball(){
     ball.style.left = ballcurrentpos[0]+'px'
 ball.style.bottom = ballcurrentpos[1]+'px'
     if (arrstart>0){
-        yDirection =2- 4*(ballcurrentpos[0] / 1460)
+        yDirection =2- 4*( (ballcurrentpos[0] -30) / 1460)
     }
 }
 
